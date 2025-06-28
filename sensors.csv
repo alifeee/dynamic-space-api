@@ -1,7 +1,7 @@
 influx_device_id,influx_field_measurement,spaceapi_sensortype,spaceapi_unit,sensor_location,sensor_description
-ESP8266-BUSSIGN,co2,carbondioxide,ppm,common room,"SCD40. this sensor is inside a box (the train sign), interpret as appropriate. https://github.com/sheffieldhackspace/co2-train-sign"
-ESP8266-BUSSIGN,temperature,temperature,°C,common room,"SCD40. this sensor is inside a box (the train sign), interpret as appropriate. https://github.com/sheffieldhackspace/co2-train-sign"
-ESP8266-BUSSIGN,humidity,humidity,%,common room,"SCD40. this sensor is inside a box (the train sign), interpret as appropriate. https://github.com/sheffieldhackspace/co2-train-sign"
+ESP8266-TRAINSIGN,co2,carbondioxide,ppm,common room,"SCD40. this sensor is inside a box (the train sign), interpret as appropriate. https://github.com/sheffieldhackspace/co2-train-sign"
+ESP8266-TRAINSIGN,temperature,temperature,°C,common room,"SCD40. this sensor is inside a box (the train sign), interpret as appropriate. https://github.com/sheffieldhackspace/co2-train-sign"
+ESP8266-TRAINSIGN,humidity,humidity,%,common room,"SCD40. this sensor is inside a box (the train sign), interpret as appropriate. https://github.com/sheffieldhackspace/co2-train-sign"
 Env-02,Pressure,barometer,hPa,common room,BME280
 Env-02,Temperature,temperature,°C,common room,BME280
 Env-02,Humidity,humidity,%,common room,BME280

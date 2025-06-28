@@ -7,7 +7,7 @@ rm -f "${tempfile}"
 query='from(bucket: "test")
   |> range(start: -1h)
   |> filter(fn: (r) => r["_measurement"] == "environment")
-  |> filter(fn: (r) => r["Device"] == "Env-02" or r["device"] == "ESP8266-BUSSIGN")
+  |> filter(fn: (r) => r["Device"] == "Env-02" or r["device"] == "ESP8266-TRAINSIGN")
   |> filter(fn: (r) =>
   	r["_field"] == "Temperature" or r["_field"] == "Pressure" or r["_field"] == "Humidity" or
   	r["_field"] == "temperature" or r["_field"] == "humidity" or r["_field"] == "co2" or
@@ -66,7 +66,7 @@ function output_sensor {
 }
 
 # re-usable stuff
-trainsign_id="ESP8266-BUSSIGN"
+trainsign_id="ESP8266-TRAINSIGN"
 trainsign_desc="SCD40. this sensor is inside a box (the train sign), interpret as appropriate. https://github.com/sheffieldhackspace/co2-train-sign"
 
 bme_id="Env-02"
