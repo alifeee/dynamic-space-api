@@ -14,6 +14,7 @@ code=$(curl --request POST \
   "${INFLUX_URL}/api/v2/query?orgID=${ORGID}" \
   --header "Authorization: Token ${TOKEN}" \
   --header 'Accept: application/csv' \
+	--header 'Cache-control: no-cache' \
   --header 'Content-type: application/vnd.flux' \
   --data "${query}" \
   -o "${resultfile}" \
