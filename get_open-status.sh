@@ -4,7 +4,8 @@ query='from(bucket: "test")
   |> range(start: -1h)
   |> filter(fn: (r) => r["_measurement"] == "doorstate")
   |> filter(fn: (r) => r["_field"] == "state")
-  |> last()'
+  |> group()
+  |> last(column: "_time")'
 
 result=$(./request.sh "${query}")
 if [[ "${?}" != 0 ]]; then
