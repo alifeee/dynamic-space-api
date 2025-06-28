@@ -33,12 +33,19 @@ server {
 
   server_name spaceapi.alifeee.net;
 
-# root /var/www/dynamic-space-api/;
-
   location = / {
     include fastcgi_params;
     fastcgi_param SCRIPT_FILENAME /var/www/dynamic-space-api/spaceapi_cgi.sh;
     fastcgi_pass unix:/var/run/fcgiwrap.socket;
+
+    add_header Cache-Control 'private no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0';
+    if_modified_since off;
+    add_header Last-Modified "";
   }
 }
 ```
+
+## server setup
+
+1. set up nginx
+2. make sure www-data user can write files

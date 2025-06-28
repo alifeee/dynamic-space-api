@@ -7,9 +7,9 @@ if [[ -z "${query}" ]]; then
   exit 1
 fi
 
-source .env
+set -a && source .env && set +a
 
-resultfile="/tmp/829utfgj2w"
+resultfile="/tmp/$(whoami)_829utfgj2w"
 code=$(curl --request POST \
   "${INFLUX_URL}/api/v2/query?orgID=${ORGID}" \
   --header "Authorization: Token ${TOKEN}" \

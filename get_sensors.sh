@@ -1,7 +1,7 @@
 #!/bin/bash
 # get all most recent measurements from InfluxDB and export them
 
-tempfile="/tmp/72gfywui228.tmp"
+tempfile="/tmp/$(whoami)72gfywui228.tmp"
 rm -f "${tempfile}"
 
 query='from(bucket: "test")
