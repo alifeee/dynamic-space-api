@@ -1,3 +1,5 @@
+> [!CAUTION]
+> MOVED! see <https://git.alifeee.net/dynamic-space-api/about/>
 # SpaceAPI
 
 fill static [SpaceAPI](https://spaceapi.io/) with dynamic sensor and state data
